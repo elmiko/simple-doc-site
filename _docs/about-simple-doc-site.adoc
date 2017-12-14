@@ -1,0 +1,125 @@
+= About Simple Doc Site
+:page-weight: 50
+
+== About the project
+
+Simple Doc Site is a project to help provide a head start for anyone looking
+to create simple lightweight documentation. It focuses on neutral formats
+for interchance and a stripped-down layout to empower rapid development and
+customization.
+
+With the contents of this repository you can quickly setup an
+https://asciidoc.org[AsciiDoc] based document store which can render to a
+static HTML site.
+
+The project files have been organized to reduce the need for extended
+engineering and maintenance on pieces that are not necessary. A few basic
+starters for meta-project related documentation are included as well.
+
+== Project files
+
+These files are the building blocks to create your document store on top of,
+where possible they have been trimmed to reduce non-essential features.
+Following the listing you will find a description of each file.
+
+```
+.
+├── 404.html
+├── _config.yml
+├── CONTRIBUTING.md
+├── _docs
+│   ├── about-simple-doc-site.adoc
+│   └── example-document-template.adoc
+├── Gemfile
+├── Gemfile.lock
+├── index.html
+├── _layouts
+│   └── default.html
+├── LICENSE
+└── README.md
+```
+
+**404.html**
+
+`404.html` is the error page for the "404 Not Found" HTML response from the
+site.
+
+**_config.yml**
+
+`_config.yml` is the Jekyll configuration file for the site. It has been
+customized to fit the needs of Simple Doc Site, if you need to extend the
+functionality of Jekyll and your rendering process please see the
+https://jekyllrb.com/docs/configuration/[upstream documentation].
+
+**CONTRIBUTING.md**
+
+This file contains information about how to make contributions to the project
+as well as how to generate and preview the static content. It can also be
+used as a template for starting a contribution doc in any derivative works
+as well.
+
+**_docs directory**
+
+The `_docs` directory is where you will place any AsciiDoc files that are
+meant to be rendered into the static HTML content. This directory should be
+the main focus of efforts to create or consolodate documents.
+
+**_docs/about-simple-doc-site.adoc**
+
+This file.
+
+**_docs/example-document-template.adoc**
+
+As Simple Doc Site is meant to be used as a template for creating document
+stores, this file is placed to provide inspiration for a template that
+new users can follow.
+
+**Gemfile**
+
+Gem's are the basic unit of installable software for Ruby, which is what
+Jekyll is written with, and the `Gemfile` lists all the software dependencies.
+
+**Gemfile.lock**
+
+Much like the `Gemfile`, `Gemfile.lock` contains a version pinned listing of
+all dependencies that must be installed for the generator to run. This file
+helps to ensure successive runs will complete.
+
+**index.html**
+
+`index.html` is the root file for the generated HTML site. By default it will
+simply show a site title and list of the document titles with links to each.
+
+**_layouts/default.html**
+
+The `_layouts` directory is used to store any HTML files that will be used
+as layout templates for the rendered site content. The `default.html` is a
+very basic template that will create a plain HTML page with the content
+rendered in the `body` element.
+
+**LICENSE**
+
+The license file for this repository, Apache version 2 is the default.
+
+**README.md**
+
+`README.md` contains the basic instructions for the repository with links to
+the instructional documents.
+
+== Next steps
+
+Now is a great time to inspect the `example-document-template.adoc` file to
+learn more about adding content to the Simple Doc Site. When you are ready,
+you should replace the `about-simple-doc-site.adoc` and
+`example-document-template.adoc` with your content and begin creating your
+documents.
+
+If you intend to use the meta-project docuements in your site as well, you
+should adjust the `CONTRIBUTING.md` file to reflect your process and remove
+references to Simple Doc Site.
+
+You may also wish to customize the `_config.yml` with your site title and
+other contact information.
+
+With these simple changes you will be on your way to creating a Simple Doc
+Site of your own!

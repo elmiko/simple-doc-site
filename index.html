@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div>
+  <h1>{{ site.title }}</h1>
+</div>
+
+<div>
+  <h2>Titles</h2>
+  <ul>
+  {% assign sorted_docs = site.docs | sort: 'weight' %}
+  {% for doc in sorted_docs %}
+  <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+  {% endfor %}
+  </ul>
+</div>

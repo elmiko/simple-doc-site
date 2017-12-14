@@ -1,0 +1,81 @@
+= Example Document Template
+:page-weight: 100
+
+[[introduction]]
+== Introduction
+
+When creating new documentation stores for a project it is often helpful to
+provide a standard template which can be used as a starting point for new
+files. This example template demonstrates how such a file could be structured
+and what types of information it may contain. Utilizing a template is not
+required but can be useful in providing an easy start for new contributors.
+
+It is also very useful to specify the format of the document and point to
+references for further instruction. For example, this document uses the
+AsciiDoc format and you are free to use any of the available markup
+(see https://asciidoc.org/).
+
+If you plan to use a document template, you will most likely want to call out
+its usage in your `CONTRIBUTING.md` file. This can take the form of
+instructions for creating new content to copy the example template and fill
+in all the appropriate sections. In this manner you can quickly and easily
+create a unifying format for your documents.
+
+[[content]]
+== Content Sections
+
+One very useful method for structuring an example template is to create the
+section titles that you will expect to be found in the final documents. Within
+each section you can provide relevant information about what the author should
+write.
+
+You may notice that this section begins with a statement enclosed in square
+braces `[[content]]`. This statement will instruct the AsciiDoc tooling to
+create an HTML `id` tag in the header. Adding these identifier statements can
+be very useful for building richly linked documents that contain references
+directly to the sections.
+
+[[metadata]]
+== Metadata
+
+Another common task is to include metadata with a document. This metadata can
+be used by the static site generator to change behavior or simply to provide
+deeper attributions. AsciiDoc provides attribute entity blocks to allow this
+type of customization.
+
+You may have noticed the `:page-weight:` directive immediately after the title
+element. This is an example of how we can use the attribute blocks to define
+variables that will change the behavior of our site render. In this case the
+variable allows us to determine the ordering for document display in the
+`index.html` file.
+
+For a deeper discussion of how these variables can be used please see the
+http://asciidoc.org/asciidoc.css-embedded.html#X18[AsciiDoc Attribute Entry documentation]
+and the https://github.com/asciidoctor/jekyll-asciidoc#page-attributes[Jekyll-AsciiDoc Page attributes documentation].
+
+[[other-content]]
+== Other content
+
+Document contributors will often need to include content that is difficult
+to recreate is AsciiDoc or requires special markup. The example template is
+a perfect place to illustrate how this content should be added.
+
+For example, if we would like to instruct future contributors about adding
+images to their document we might add the following:
+
+If you wish to include an image in your document, add the image file to the
+root `assets` directory in this repository and then reference it in your
+document with the following statement:
+
+```
+image:/assets/my_image.png[Alt text]
+```
+
+Alternatively, if you wish to use HTML markup you could use this format:
+
+```
+pass:[<img src="/assets/my_image.png" alt="Alt text" class="some-class">]
+```
+
+In this manner you can create rich documentation about adding content to
+documents, and help to enforce consistency of usage for all contributors.
