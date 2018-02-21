@@ -114,7 +114,7 @@ you should replace the `about-simple-doc-site.adoc` and
 `example-document-template.adoc` with your content and begin creating your
 documents.
 
-If you intend to use the meta-project docuements in your site as well, you
+If you intend to use the meta-project documents in your site as well, you
 should adjust the `CONTRIBUTING.md` file to reflect your process and remove
 references to Simple Doc Site.
 
